@@ -1,0 +1,119 @@
+.system-nimble .nimble-chat-card .nimble-heading,
+.system-nimble .nimble-sheet .nimble-heading,
+.system-nimble .nimble-tooltip .nimble-heading {
+  --nimble-default-heading-gap: 0.375rem;
+  --nimble-default-heading-size: var(--nimble-sm-text);
+  --nimble-default-heading-weight: 900;
+  --nimble-default-heading-color: var(--nimble-dark-text-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: var(--nimble-heading-justification);
+  gap: var(--nimble-heading-gap, var(--nimble-default-heading-gap));
+  height: auto;
+  margin: var(--nimble-heading-margin, 0);
+  padding: var(--nimble-heading-padding, 0);
+  font-size: var(--nimble-heading-size, var(--nimble-default-heading-size));
+  font-weight: var(--nimble-heading-weight, var(--nimble-default-heading-weight));
+  line-height: var(--nimble-heading-line-height, 1);
+  text-shadow: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--nimble-heading-color, var(--nimble-default-heading-color));
+  background: transparent;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  transition: var(--nimble-standard-transition);
+
+  &[data-heading-variant="document"] {
+    --nimble-default-heading-size: var(--nimble-lg-text);
+  }
+
+  &[data-heading-variant="field"],
+  &[data-heading-variant="item"] {
+    --nimble-default-heading-weight: 600;
+  }
+
+  &[data-heading-variant="section"] {
+    text-transform: uppercase;
+  }
+
+  /* These heading styles are sometimes used for input elements (e.g. actor names) */
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &--armor,
+  &--hp {
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 0 4px #000;
+    padding-block-end: 0.25rem;
+  }
+
+  &--armor {
+    justify-content: center;
+  }
+
+  &--character-creator {
+    font-size: var(--nimble-xl-text);
+    gap: 0.75rem;
+  }
+
+  &--clickable {
+    cursor: pointer;
+  }
+
+  &--document-tooltip-name {
+    grid-area: name;
+    width: 100%;
+    overflow: hidden;
+    line-height: 1;
+
+    &:has(~ .nimble-tooltip__item-metadata) {
+      align-self: end;
+    }
+  }
+
+  &--hp {
+    padding-inline-start: 0.75rem;
+  }
+
+  &--large {
+    font-size: var(--nimble-lg-text);
+  }
+
+  &__icon {
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    color: inherit;
+    background: transparent;
+
+    &:hover {
+      color: inherit;
+      box-shadow: none;
+    }
+
+    &--activation {
+      font-size: var(--nimble-xs-text);
+    }
+
+    &--character-creator {
+      font-size: var(--nimble-lg-text);
+      transform: translateY(-1px);
+      transition: var(--nimble-standard-transition);
+
+      &:hover {
+        transform: translateY(-1px) scale(1.2);
+      }
+    }
+
+    &--warning {
+      color: #b01b19;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.system-nimble .nimble-sheet table {
+  table-layout: fixed;
+  empty-cells: show;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: var(--nimble-sm-text);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: var(--nimble-box-shadow);
+
+  thead,
+  tfoot {
+    --nimble-heading-color: inherit;
+
+    background: var(--nimble-navigation-background-color);
+    color: var(--nimble-navigation-text-color);
+    font-family: var(--nimble-primary-font);
+    font-size: inherit;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  thead {
+    border-bottom: 1px solid var(--nimble-navigation-border-color);
+  }
+
+  tfoot {
+    border-top: 1px solid var(--nimble-navigation-border-color);
+  }
+
+  tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  th {
+    font-weight: inherit;
+  }
+
+  td {
+    font-weight: 500;
+  }
+}

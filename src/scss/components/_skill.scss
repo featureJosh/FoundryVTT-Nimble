@@ -1,0 +1,80 @@
+.system-nimble .nimble-sheet .nimble-skill {
+  --button-size: fit-content;
+
+  display: grid;
+  grid-template-columns: 4ch 1fr 4ch;
+  gap: 0.75rem;
+  margin-block-end: var(--nimble-skill-margin-block-end, 0.125rem);
+  padding-inline: var(--nimble-skill-padding-inline-start, 0) var(--nimble-skill-padding-inline-end, 0.5rem);
+  padding-block: var(--nimble-skill-padding-block-start, 0) var(--nimble-skill-padding-block-end, 0);
+  line-height: 1;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  border-bottom: var(--nimble-skill-border, 0);
+  transition: var(--nimble-standard-transition);
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    color: var(--nimble-dark-text-hover-color);
+    text-shadow: 0 0 3px var(--nimble-dark-text-glow-color);
+    box-shadow: none;
+    text-shadow: none;
+  }
+
+  &--compact {
+    grid-template-columns: 1fr 4ch;
+  }
+
+  &--show-passive {
+    grid-template-columns: 4ch 1fr 4ch 4ch;
+  }
+
+  &--compact.nimble-skill--show-passive {
+    gap: 0.25rem;
+    grid-template-columns: 1fr 3ch 3ch;
+    padding-inline: 0.25rem;
+  }
+
+  &--character-creator {
+    grid-template-columns: 4ch 1fr max-content 3ch;
+    align-items: center;
+  }
+
+  &__heading {
+    position: relative;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    border: 0;
+  }
+
+  &__ability {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: var(--nimble-medium-text-color);
+  }
+
+  &__name {
+    white-space: nowrap;
+    font-weight: 500;
+    text-align: start;
+  }
+
+  &__passive-score {
+    color: var(--nimble-medium-text-color);
+    text-align: center;
+  }
+
+  &__value {
+    text-align: end;
+
+    &--character-creator {
+      font-weight: 900;
+    }
+  }
+}

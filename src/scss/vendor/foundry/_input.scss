@@ -1,0 +1,26 @@
+.system-nimble .nimble-sheet {
+    select {
+        --input-border-color: transparent;
+
+        outline: none;
+        box-shadow: none;
+    }
+
+    input {
+        --input-border-color: transparent;
+
+        &[type="text"],
+        &[type="number"] {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    input[type="checkbox"] {
+        --checkbox-checked-color: var(--nimble-checkbox-checked-color);
+
+        &:checked::before {
+            --checkbox-checkmark-color: var(--nimble-checkbox-checkmark-color);
+        }
+    }
+}

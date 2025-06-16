@@ -1,0 +1,14 @@
+.nimble-roll-formula {
+  padding: 0.5rem;
+  font-size: var(--nimble-sm-text);
+  font-weight: 500;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+
+  &--tooltip {
+    margin: 0.5rem;
+    margin-block-start: 0;
+    font-size: var(--nimble-sm-text);
+  }
+}

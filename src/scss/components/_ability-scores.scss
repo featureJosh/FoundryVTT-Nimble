@@ -1,0 +1,9 @@
+.nimble-sheet .nimble-stats {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
+  list-style: none;
+  padding: 0;
+  margin: 0.25rem 0 0;
+  padding-block-start: 0.125rem;
+}

@@ -1,0 +1,8 @@
+.system-nimble .nimble-document-list {
+  display: grid;
+  grid-template-columns: var(--nimble-document-list-columns, 1fr);
+  gap: var(--nimble-document-list-gap, 0.25rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
